@@ -12,7 +12,7 @@
     margin: 0 auto;
 }
 
-/*1st screen related. Ends line 71*/
+/*1st screen related. Ends line 76*/
 
 .user-form {
     position: absolute;
@@ -126,8 +126,7 @@
 
 .content {
     padding-top: 80px;
-    z-index: 0;
-    min-height: calc (100%-130px);
+    min-height: calc(100vh - 130px);
 }
 
 .side-nav {
@@ -142,9 +141,8 @@
 .side-nav__link {
     display: block;
     text-decoration: none;
-    height: 44px;
     color: #414141;
-    padding-right: 25px;
+    padding: 12px 25px 12px;
 }
 
 .side-nav__link:hover {
@@ -161,7 +159,8 @@
     float: right;
     display: flex;
     padding-top: 25px;
-    padding-left: 55px;
+    justify-content: space-between;
+    width: 700px;
 }
 
 .main-info__pic {
@@ -174,7 +173,13 @@
 
 .main-info__text {
     padding-left: 55px;
+}
+
+.text--info {
     line-height: 26px;
+    height: 299px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .footer {
