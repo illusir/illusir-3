@@ -128,13 +128,11 @@
 .link--top {
     color: #33c1e3;
     font-weight: bold;
-    background: url(./img/underline.png) repeat-x 100% 100%;
-    padding-bottom: 4px;
-}
-
-.link--top:hover {
-    color: #e85f61;
-    background: url(./img/underline-hover.png) repeat-x 100% 100%;
+    background-image: linear-gradient(to right, #33c1e3 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 4px 1px;
+    background-repeat: repeat-x;
+    padding-bottom: 2px;
 }
 
 .content {
@@ -261,58 +259,78 @@
 }
 
 .social__link--fb {
-    background: url(./img/icons/facebook.svg) no-repeat;
+    background: url(../img/icons/facebook.svg) no-repeat;
     background-size: contain;
 
 }
 
 .social__link--vk {
-    background: url(./img/icons/vk.svg) no-repeat;
+    background: url(../img/icons/vk.svg) no-repeat;
     background-size: contain;
 
 }
 
 .social__link--tw {
-    background: url(./img/icons/twitter.svg) no-repeat;
+    background: url(../img/icons/twitter.svg) no-repeat;
     background-size: contain;
 
 }
 
 .social__link--fb:hover {
-    background: url(./img/icons/facebook-hover.svg) no-repeat;
+    background: url(../img/icons/facebook-hover.svg) no-repeat;
     background-size: contain;
 }
 
 .social__link--vk:hover {
-    background: url(./img/icons/vk-hover.svg) no-repeat;
+    background: url(../img/icons/vk-hover.svg) no-repeat;
     background-size: contain;
 }
 
 .social__link--tw:hover {
-    background: url(./img/icons/twitter-hover.svg) no-repeat;
+    background: url(../img/icons/twitter-hover.svg) no-repeat;
     background-size: contain;
 }
 
 /*dropdown menu attempt*/
 
+.top-link__triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #dddddd;
+    position: absolute;
+    top: 60px;
+    margin-left: 90px;
+    display: none;
+}
+
 .top-link__dropdown {
     display: none;
     position: absolute;
-    top: 60px;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    top: 70px;
+    background-color: white;
+    width: 191px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
     z-index: 2;
+    padding-left: 10px;
 }
 
 .link--drop {
-    color: black;
-    padding: 12px 16px;
-    display: block;
+    color: #414141;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 10px 0;
 }
 
 .link--drop:hover {
-    background-color: #f1f1f1;
+    color: #33c1e3;
+}
+
+.top-link:hover .top-link__triangle {
+    display: block;
 }
 
 .top-link:hover .top-link__dropdown {
@@ -321,5 +339,13 @@
 
 .top-link:hover:hover .link--top {
     color: #e85f61;
-    background: url(./img/underline-hover.png) repeat-x 100% 100%;
+    background-image: linear-gradient(to right, #e85f61 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 4px 1px;
+    background-repeat: repeat-x;
+}
+
+.fa-envelope, .fa-phone, .fa-skype {
+    color: #33c1e3;
+    padding-right: 5px;
 }
