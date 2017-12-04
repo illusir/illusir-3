@@ -101,7 +101,7 @@ y-axis
 	}
 
 	.mCSB_scrollTools .mCSB_dragger{ /* the draggable element */
-		cursor: pointer;
+		cursor:  default;
 		width: 100%;
 		height: 30px; /* minimum dragger height */
 		z-index: 0;
