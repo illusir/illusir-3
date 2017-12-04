@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="jquery.mCustomScrollbar.css">
     <link rel="shortcut icon" type="image/png" href="./img/favicon.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Fira+Sans" rel="stylesheet">
@@ -19,7 +20,12 @@
                  <span class="top-info__name">Анатолий Анатольев</span>
             </div>
             <div class="top-link">
-                <a class="top-link__link" href="#">Мои контакты</a>
+                <a class="link link--top" href="#">Мои контакты</a>
+                <div class="top-link__dropdown">
+                    <a class="link link--drop" href="#">Link 1</a>
+                    <a class="link link--drop" href="#">Link 2</a>
+                    <a class="link link--drop" href="#">Link 3</a>
+                </div>
             </div>
             <div style="clear: both"></div>
         </div>
@@ -37,13 +43,19 @@
                     <h1 class="text text--big">
                         Обо мне
                     </h1>
-                    <p class="text text--info">
+                    <p class="text text--info  mCustomScrollbar" data-mcs-theme="dark">
                         Меня зовут Анатолий. Проживаю в городе Тольятти. В последнее время открыл для себя много интересного в JavaScript и всех сопутствующих тенденциях от Microsoft:ASP.NET 4, Knockout, SignalR, Upshot. Учусь писать тестируемый код на net. Делю логику на классы(стараюсь не забывать SOLID принципы) и тестировать юнит тестами. Хорошо пишу процедуры для MySQL. Чувствую в себе слабое владение client side и поэтому стараюсь восполнить данную нишу по мере возможностей. Из последних
                         книг которые прочитал могу выделить: Professional ASP.NET MVC 3, JavaScript: The Good Parts, прочел много статей и туториалов. Знаком с “бандой четырех” и стараюсь использовать паттерны и практики где это необходимо и оправданно. Прочитал паттерны несколько раз но все равно есть непонимание некоторых моментов. Макконела также не обошел стороной. Иногда Читаю Фаулера выборочно: рефакторинг, PoEAA. Проблем с 5+ лет в IT было решено много разных.
                     </p>
                 </div>
             </div>
             <div style="clear: both"></div>
+            <div class="button-area">
+                <button class="button button--red">
+                    <i class="fa fa-download fa-fw"></i>Загрузить резюме
+                </button>
+            </div>
+            <div style="clear: right"></div>
         </div>
     </div>
     <footer class="footer">
@@ -54,11 +66,13 @@
                 </p>
         </div>
         <div class="social">
-            <a class="social__link" href="#">facebook</a>
-            <a class="social__link" href="#">vkontakte</a>
-            <a class="social__link" href="#">twitter</a>
+            <a class="social__link social__link--fb" target="_blank" href="https://facebook.com"></a>
+            <a class="social__link social__link--vk" target="_blank" href="https://vk.com"></a>
+            <a class="social__link social__link--tw" target="_blank" href="https://twitter.com"></a>
         </div>
         <div style="clear: both"></div>
     </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
 </body>
 </html>
