@@ -1,0 +1,63 @@
+.footer {
+    background-color: #414141;
+    height: 50px;
+    width: 100%;
+}
+
+.legal {
+    @include flex ();
+    align-items: center;
+    float: left;
+    height: 50px;
+
+    &__info {
+        color: #9c9c9c;
+        font-size: 14px;
+        font-weight: 300;
+    }
+}
+
+.social {
+    @include flex ();
+    align-items: center;
+    float: right;
+    height: 50px;
+
+    &__link {
+        border: none;
+        height: 30px;
+        padding-right: 5px;
+        text-decoration: none;
+        width: 30px;
+
+        &--fb {
+            background: url(../img/icons/facebook.svg) no-repeat;
+            background-size: contain;
+        }
+
+        &--vk {
+            background: url(../img/icons/vk.svg) no-repeat;
+            background-size: contain;
+            }
+
+        &--tw {
+            background: url(../img/icons/twitter.svg) no-repeat;
+            background-size: contain;
+        }
+
+        &--fb:hover {
+            background: url(../img/icons/facebook-hover.svg) no-repeat;
+            background-size: contain;
+        }
+
+        &--vk:hover {
+            background: url(../img/icons/vk-hover.svg) no-repeat;
+            background-size: contain;
+        }
+
+        &--tw:hover {
+            background: url(../img/icons/twitter-hover.svg) no-repeat;
+            background-size: contain;
+        }
+    }
+}

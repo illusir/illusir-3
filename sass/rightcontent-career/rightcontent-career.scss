@@ -1,0 +1,77 @@
+.career-content {
+    @include flex ();
+    float: right;
+    justify-content: space-between;
+    width: 700px;
+}
+
+.pic {
+    width: 220px;
+    height: 220px;
+    border-radius: 9px;
+    background-color: #595959;
+}
+
+.divider {
+    position:absolute;
+    height: 100%;
+    width: 1px;
+    color: #595959;
+    z-index: 0;
+}
+
+.info {
+    padding-left: 25px;
+    width: 460px;
+    z-index: 0;
+}
+
+.card {
+    @include flex ();
+    align-items: center;
+
+    &__left {
+        float: left;
+        width: 60px;
+    }
+
+    &__right {
+        float: right;
+        padding-left: 25px;
+        padding-top: 25px;
+        width: 380px;
+        height: 107px;
+        border-radius: 10px;
+        box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+        background-color: #ffffff;
+    }
+}
+
+.text--big {
+    color: #414141;
+    font-size: 35px;
+}
+
+.text--info {
+    line-height: 26px;
+    height: 299px;
+    overflow: hidden;
+}
+
+.button-area {
+    float: right;
+}
+
+.button--red {
+    background: #f6f6f6;
+    border: 2px solid #e75f61;
+    color: #e85f61;
+    font-family: 'Open Sans', sans-serif;
+    margin: 50px 0;
+    width: 173px;
+}
+
+.button--red:hover {
+    background: #e75f61;
+    color: white;
+}

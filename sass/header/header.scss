@@ -1,0 +1,112 @@
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.top-info {
+    @include flex ();
+    align-items: center;
+    float: left;
+    height: 80px;
+
+    &__img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid #d6d6d6;
+    }
+
+    &__name {
+        margin-left: 20px;
+        color: #414141;
+        font-weight: normal;
+        font-size: 18px;
+        }
+}
+
+.top-link {
+    @include flex ();
+    align-items: center;
+    height: 80px;
+    float: right;
+
+    &__triangle {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #dddddd;
+        position: absolute;
+        top: 60px;
+        margin-left: 90px;
+        display: none;
+    }
+
+    &__dropdown {
+        display: none;
+        position: absolute;
+        top: 70px;
+        background-color: white;
+        width: 191px;
+        border: 1px solid #dddddd;
+        border-radius: 10px;
+        z-index: 2;
+        padding-left: 10px;
+
+    }
+}
+
+.link {
+    text-decoration: none;
+
+    &--top {
+        color: #33c1e3;
+        font-weight: bold;
+        background-image: linear-gradient(to right, #33c1e3 33%, rgba(255,255,255,0) 0%);
+        background-position: bottom;
+        background-size: 4px 1px;
+        background-repeat: repeat-x;
+        padding-bottom: 2px;
+    }
+
+    &--drop {
+        color: #414141;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 300;
+        padding: 10px 0;
+    }
+
+    &--drop:hover {
+        color: #33c1e3;
+    }
+}
+
+/*following are not really BEM friendly yet*/
+
+.top-link:hover .top-link__triangle {
+    display: block;
+}
+
+.top-link:hover .top-link__dropdown {
+    display: block;
+}
+
+.top-link:hover .link--top {
+    color: #e85f61;
+    background-image: linear-gradient(to right, #e85f61 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 4px 1px;
+    background-repeat: repeat-x;
+}
+
+.fa-envelope, .fa-phone, .fa-skype {
+    color: #33c1e3;
+    padding-right: 5px;
+}
+
+/*the end*/

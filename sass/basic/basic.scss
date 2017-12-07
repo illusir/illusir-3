@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    font-family: $font-stack;
+}
+
+#body {
+     background: #f5f5f5;
+}
+
+.content {
+    padding-top: 80px;
+    min-height: calc(100vh - 130px);
+}
+
+.container {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.button {
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+}
+
+.headline {
+    width: 700px;
+    float: right;
+}

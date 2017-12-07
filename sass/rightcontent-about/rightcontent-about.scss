@@ -1,0 +1,49 @@
+
+.main-info {
+    @include flex ();
+    float: right;
+    justify-content: space-between;
+    padding-top: 25px;
+    width: 700px;
+
+    &__pic {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background-color: #f5f5f5;
+        border: 5px solid #ffffff
+    }
+
+    &__text {
+        padding-left: 55px;
+    }
+}
+
+.text--big {
+    color: #414141;
+    font-size: 35px;
+}
+
+.text--info {
+    line-height: 26px;
+    height: 299px;
+    overflow: hidden;
+}
+
+.button-area {
+    float: right;
+}
+
+.button--red {
+    background: #f6f6f6;
+    border: 2px solid #e75f61;
+    color: #e85f61;
+    font-family: 'Open Sans', sans-serif;
+    margin: 50px 0;
+    width: 173px;
+}
+
+.button--red:hover {
+    background: #e75f61;
+    color: white;
+}

@@ -1,0 +1,25 @@
+.side-nav {
+    float: left;
+    width: 220px;
+    font-weight: normal;
+    text-align: right;
+    font-size: 18px;
+    padding-top: 25px;
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: #414141;
+        padding: 12px 25px 12px;
+    }
+
+    &__link:hover {
+        color: #33c1e3;
+    }
+
+    &__link--current {
+        color: #33c1e3;
+        border-right: 6px solid #33c1e3;
+        font-weight: bold;
+    }
+}
