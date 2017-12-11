@@ -18,14 +18,13 @@
 }
 
 .divider {
-    content: '';
     position: absolute;
-    margin-left: 56px;
-    top: 55px;
+    left: 55px;
+    top: 58px;
     height: 76%;
     width: 1px;
     background-color: #595959;
-    z-index: 0;
+    z-index: 1;
 }
 
 
@@ -43,11 +42,16 @@
         text-align: right;
         margin-right: 25px;
         z-index: 1;
+        position: relative;
+        text-align: left;
     }
 
     &__year::after {
         content: '';
-        display: inline-block;
+        position: absolute;
+        top: -3px;
+        right: 0;
+        display: block;
         border-radius: 50%;
         width: 10px;
         height: 10px;
@@ -62,7 +66,7 @@
         border-radius: 10px;
         box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
         background-color: #ffffff;
-        cursor: pointer; 
+        cursor: pointer;
     }
 }
 
