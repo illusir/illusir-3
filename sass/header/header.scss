@@ -4,7 +4,7 @@
     height: 80px;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .top-info {
@@ -33,6 +33,8 @@
     align-items: center;
     height: 80px;
     float: right;
+    width:191px;
+    justify-content: center;
 
     &__triangle {
         width: 0;
@@ -42,7 +44,7 @@
         border-bottom: 10px solid #dddddd;
         position: absolute;
         top: 60px;
-        margin-left: 90px;
+        margin-left: 0px;
         display: none;
     }
 
@@ -56,7 +58,6 @@
         border-radius: 10px;
         z-index: 2;
         padding-left: 10px;
-
     }
 }
 

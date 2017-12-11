@@ -9,9 +9,11 @@ var autoprefixer  = require('gulp-autoprefixer');
 var sourceMaps    = require('gulp-sourcemaps');
 var gulpif        = require('gulp-if');
 var clean         = require('gulp-clean');
+var browserSync   = require('browser-sync').create();
 
 // Окружение
-var ENV = process.env.NODE_ENV || 'production';
+//const ENV = process.env.NODE_ENV || 'production';
+var ENV = 'dev';
 
 // Задача запускаемая по умолчанию
 gulp.task('default', function() {
@@ -27,8 +29,23 @@ gulp.task('default', function() {
 
 // Задача для автозапуска нужных подзадач
 gulp.task('watch', function () {
-    ENV = 'dev';
     gulp.watch('sass/**/*.scss', ['sass']);
+    gulp.watch([
+        '*.html',
+        'src/*.css',
+        'sass/**/*.scss'
+    ]).on('change', browserSync.reload);
+});
+
+// Запуск BrowserSync
+gulp.task('server', function() {
+    browserSync.init({
+        port: 9000,
+        open: false,
+        server: {
+            baseDir: "./"
+        },
+    });
 });
 
 // Подзадача для запуска сборщика SCSS файлов
