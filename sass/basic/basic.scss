@@ -27,8 +27,24 @@
 .headline {
     width: 700px;
     float: right;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    color: $primary-color;
+    font-size: 35px;
+    font-weight: 600;
 }
 
 .text {
+    margin: 0;
     color: #414141;
+}
+
+/*@media заросы*/
+
+@media screen and (max-width:520px) {
+
+    #body {
+        background-color: #000;
+    }
+
 }

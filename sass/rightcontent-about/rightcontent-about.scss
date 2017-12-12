@@ -10,24 +10,31 @@
         width: 220px;
         height: 220px;
         border-radius: 50%;
-        background-color: #f5f5f5;
-        border: 5px solid #ffffff
+        border: 5px solid #ffffff;
+        margin-left: 15px;
+        /*background-image: url(../img/photo.png);
+        background-size: cover;*/
     }
 
     &__text {
         padding-left: 55px;
+        width: 400px;
     }
 }
 
 .text--big {
-    color: #414141;
+    color: $primary-color;
     font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
 .text--info {
     line-height: 26px;
-    height: 299px;
+    height: 290px;
     overflow: hidden;
+    font-weight: 300;
+    font-size: 18px;
 }
 
 .button-area {
@@ -39,8 +46,10 @@
     border: 2px solid #e75f61;
     color: #e85f61;
     font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
     margin: 50px 0;
     width: 173px;
+    margin-right: 20px;
 }
 
 .button--red:hover {
