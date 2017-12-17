@@ -14,7 +14,16 @@
 
 .container {
     margin: 0 auto;
-    width: 960px;
+    width: 940px;
+
+    &__row {
+      @include flex ();
+      margin: 0 -15px;
+
+      &--space {
+        justify-content: space-between;
+      }
+    }
 }
 
 .button {
@@ -37,6 +46,10 @@
 .text {
     margin: 0;
     color: #414141;
+}
+
+.fa {
+    margin-right: 5px;
 }
 
 /*@media заросы*/

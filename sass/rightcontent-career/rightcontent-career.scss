@@ -1,3 +1,8 @@
+.career-content {
+    width: 700px;
+    padding: 0 15px;
+}
+
 .career {
     @include flex ();
     float: right;
@@ -19,7 +24,7 @@
 
 .divider {
     position: absolute;
-    left: 40px;
+    left: 60px;
     top: 58px;
     height: 75%;
     width: 1px;
@@ -32,6 +37,7 @@
     @include flex ();
     align-items: center;
     padding-bottom: 20px;
+    padding-left: 20px;
 
     &__year {
         float: left;
@@ -49,7 +55,7 @@
         content: '';
         position: absolute;
         top: -3px;
-        right:  25px;
+        right:  26px;
         display: block;
         border-radius: 50%;
         width: 10px;
@@ -60,7 +66,8 @@
 
     &__content {
         float: right;
-        padding: 15px;
+        padding: 15px 0 15px 20px;
+        margin-left: -15px;
         width: 380px;
         border-radius: 10px;
         box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
@@ -73,6 +80,8 @@
     font-size: 18px;
     font-weight: bold;
     color: #33c1e3;
+    padding-right: 15px;
+    margin-left: -15px;
 }
 
 .cards:hover .cards__year::after {

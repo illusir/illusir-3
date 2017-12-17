@@ -1,16 +1,18 @@
 .side-nav {
-    float: left;
     width: 220px;
     font-weight: normal;
     text-align: right;
     font-size: 18px;
-    padding-top: 25px;
+    padding: 24px 0;
+    margin-left: 17px;
+    box-sizing: border-box;
 
     &__link {
         display: block;
         text-decoration: none;
         color: #414141;
-        padding: 12px 25px 12px;
+        padding: 12px 24px 12px 0;
+        border-right: 6px solid transparent;
     }
 
     &__link:hover {
@@ -19,8 +21,7 @@
 
     &__link--current {
         color: #33c1e3;
-        border-right: 6px solid #33c1e3;
+        border-right-color: #33c1e3;
         font-weight: bold;
-        padding-right: 19px;
     }
 }

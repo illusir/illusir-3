@@ -3,7 +3,7 @@
     @include flex ();
     float: right;
     justify-content: space-between;
-    padding-top: 25px;
+    padding: 23px 15px 0;
     width: 700px;
 
     &__pic {
@@ -11,9 +11,7 @@
         height: 220px;
         border-radius: 50%;
         border: 5px solid #ffffff;
-        margin-left: 15px;
-        /*background-image: url(../img/photo.png);
-        background-size: cover;*/
+        margin-left: 36px;
     }
 
     &__text {
@@ -42,17 +40,35 @@
 }
 
 .button--red {
+    width: 173px;
     background: #f6f6f6;
     border: 2px solid #e75f61;
     color: #e85f61;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    margin: 50px 0;
-    width: 173px;
-    margin-right: 20px;
+    margin: 55px 14px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .button--red:hover {
     background: #e75f61;
     color: white;
+    animation-name: zoom;
+    animation-duration: 1s;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

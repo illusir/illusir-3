@@ -10,8 +10,8 @@
 .top-info {
     @include flex ();
     align-items: center;
-    float: left;
     height: 80px;
+    padding: 0 15px;
 
     &__img {
         width: 60px;
@@ -21,7 +21,7 @@
     }
 
     &__name {
-        margin-left: 20px;
+        margin-left: 19px;
         color: #414141;
         font-weight: normal;
         font-size: 18px;
@@ -33,10 +33,11 @@
     align-items: center;
     height: 80px;
     float: right;
-    width:180px;
-    justify-content: center;
+    width: 180px;
+    justify-content: flex-end;
+    padding: 0 15px;
 
-    &__triangle {
+    /*&__triangle {
         width: 0;
         height: 0;
         border-left: 10px solid transparent;
@@ -44,24 +45,22 @@
         border-bottom: 10px solid #dddddd;
         position: absolute;
         top: 60px;
-        margin-left: 0px;
+        margin-right: 100px;
         display: none;
 
         &--small {
             position: absolute;
             width: 0;
             height: 0;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-bottom: 9px solid white;
+            border-left: 9px solid transparent;
+            border-right: 9px solid transparent;
+            border-bottom: 10px solid white;
             top: 61px;
-            margin-left: 0px;
+            margin-left: 100px;
             display: none;
-        }
-    }
+        }*/
 
     &__dropdown {
-        display: none;
         position: absolute;
         top: 70px;
         background-color: white;
@@ -69,7 +68,10 @@
         border: 1px solid #dddddd;
         border-radius: 10px;
         padding-left: 10px;
-    }
+        transition: visibility 0s 0.5s, opacity 0.5s;
+        visibility: hidden;
+        opacity:0;
+        }
 }
 
 .link {
@@ -78,6 +80,7 @@
     &--top {
         color: #33c1e3;
         font-weight: bold;
+        font-size: 18px;
         background-image: linear-gradient(to right, #33c1e3 33%, rgba(255,255,255,0) 0%);
         background-position: bottom;
         background-size: 4px 1px;
@@ -100,17 +103,19 @@
 
 /*following are not really BEM friendly yet*/
 
-.top-link:hover .top-link__triangle {
+/*.top-link:hover .top-link__triangle {
     display: block;
 }
 
 .top-link:hover .top-link__triangle--small {
     display: block;
-}
+}*/
 
 .top-link:hover .top-link__dropdown {
-    display: block;
-}
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.2s;
+    }
 
 .top-link:hover .link--top {
     color: #e85f61;
