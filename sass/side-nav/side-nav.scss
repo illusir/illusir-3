@@ -24,4 +24,25 @@
         border-right-color: #33c1e3;
         font-weight: bold;
     }
+
+    &__link--current:hover {
+        animation-name: color;
+        animation-duration: 2s;
+        animation-delay: 0.2s;
+    }
+
+    @keyframes color {
+        0%  {
+            border-right-color: #33c1e3;
+            color: #33c1e3;
+        }
+        50% {
+            border-right-color: #e75f61;
+            color: #e75f61;
+        }
+        100% {
+            border-right-color: #33c1e3;
+            color: #33c1e3;
+        }
+    }
 }
