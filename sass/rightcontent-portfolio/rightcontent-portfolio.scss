@@ -1,0 +1,57 @@
+.portfolio-content {
+    width: 700px;
+    padding: 0 15px;
+}
+
+.portfolio-area {
+    @include flex ();
+    float: right;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }
+
+.card {
+    @include flex ();
+    flex-direction: column;
+    position: relative;
+    width: 220px;
+    height: 281px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    background-color: white;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+
+    &__img {
+        width: 220px;
+        height: 171px;
+    }
+
+    &__description {
+        padding: 20px;
+    }
+}
+
+.image--card {
+    width: 220px;
+    height: 171px;
+}
+
+.text--big {
+    font-size: 35px;
+}
+
+.text--portfolio {
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.text--h3-2 {
+    line-height: 26px;
+    font-size: 21px;
+    font-weight: 300;
+    color: #33c1e3;
+}
