@@ -12,11 +12,15 @@
         border-radius: 50%;
         border: 5px solid #ffffff;
         margin-left: 36px;
+        animation-name: zoomIn;
+        animation-duration: 1.5s;
     }
 
     &__text {
         padding-left: 55px;
         width: 400px;
+        animation-name: slide;
+        animation-duration: 2s;
     }
 }
 
@@ -37,6 +41,10 @@
 
 .button-area {
     float: right;
+    animation-name: redbuttonbounce;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .button--red {
@@ -57,11 +65,30 @@
 .button--red:hover {
     background: #e75f61;
     color: white;
-    animation-name: zoom;
+    animation-name: buttonzoom;
     animation-duration: 1s;
 }
 
-@keyframes zoom {
+@keyframes redbuttonbounce {
+  from {
+    opacity: 0;
+    transform: translate(0, 15%);
+  }
+
+  50% {
+      opacity: 1;
+  }
+
+  95% {
+    transform: translate(0, -2%);
+
+  }
+  100% {
+      transform: translate(0, 0%);
+  }
+}
+
+@keyframes buttonzoom {
     0% {
         transform: scale(1);
     }
@@ -71,4 +98,46 @@
     100% {
         transform: scale(1);
     }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+    from {
+      transform: translate3d(100%, 0, 0);
+      opacity: 0;
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+}
+
+@media screen and (max-width:520px) {
+
+    .main-info {
+        @include flex ();
+        justify-content: center;
+        flex-direction: column;
+        padding: 23px 15px 0;
+        width: 100%;
+
+        &__pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+        }
+
+    }
+
 }

@@ -6,6 +6,8 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
+    animation-name: bounce;
+    animation-duration: 1.5s;
 
     &__photo {
         border: 1px solid #d6d6d6;
@@ -56,11 +58,11 @@
 .button--white:hover {
     background: white;
     color: #33c1e3;
-    animation-name: zoom;
+    animation-name: buttonzoom;
     animation-duration: 1s;
 }
 
-@keyframes zoom {
+@keyframes buttonzoom {
     0% {
         transform: scale(1);
     }
@@ -70,4 +72,23 @@
     100% {
         transform: scale(1);
     }
+}
+
+@keyframes bounce {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+      opacity: 1;
+  }
+
+  95% {
+    transform: translate(-50%, -55%);
+
+  }
+  100% {
+      transform: translate(-50%, -50%);
+  }
 }

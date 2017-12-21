@@ -14,11 +14,15 @@
         height: 220px;
         border-radius: 9px;
         background-color: #595959;
+        animation-name: zoomIn;
+        animation-duration: 1.5s;
     }
 
     &__info {
         width: 460px;
         position: relative;
+        animation-name: slide;
+        animation-duration: 2s;
     }
 }
 
@@ -55,7 +59,7 @@
         content: '';
         position: absolute;
         top: -3px;
-        right:  26px;
+        right:  25px;
         display: block;
         border-radius: 50%;
         width: 10px;
@@ -90,6 +94,10 @@
 
 .cards:hover .cards__content {
     background-color: #33c1e3;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+    animation-name: cardzoom;
+    animation-duration: .5s;
+    animation-fill-mode:forwards;
 }
 
 .cards:hover .cards__content .text {
@@ -110,4 +118,37 @@
     line-height: 26px;
     font-size: 21px;
     font-weight: 400;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+    from {
+      transform: translate3d(100%, 0, 0);
+      opacity: 0;
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+}
+
+@keyframes cardzoom {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(1.02, 1.02);
+  }
 }

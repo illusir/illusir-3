@@ -6,6 +6,8 @@
     padding: 24px 0;
     margin-left: 17px;
     box-sizing: border-box;
+    animation-name: slideInLeft;
+    animation-duration: 1s;
 
     &__link {
         display: block;
@@ -29,20 +31,77 @@
         animation-name: color;
         animation-duration: 2s;
         animation-delay: 0.2s;
+        animation-iteration-count: infinite;
     }
 
-    @keyframes color {
-        0%  {
-            border-right-color: #33c1e3;
-            color: #33c1e3;
-        }
-        50% {
-            border-right-color: #e75f61;
-            color: #e75f61;
-        }
-        100% {
-            border-right-color: #33c1e3;
-            color: #33c1e3;
-        }
+}
+
+@keyframes color {
+    0%  {
+        border-right-color: #33c1e3;
+        color: #33c1e3;
     }
+    50% {
+        border-right-color: #e75f61;
+        color: #e75f61;
+    }
+    100% {
+        border-right-color: #33c1e3;
+        color: #33c1e3;
+    }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width:520px) {
+
+    .side-nav {
+        width: 100vw;
+        text-align: left;
+        font-size: 14px;
+        padding: 24px 0;
+        margin-left: 17px;
+        box-sizing: border-box;
+        animation-name: slideInLeft;
+        animation-duration: 1s;
+
+        &__link {
+            display: inline-block;
+            padding: 12px 24px 12px 0;
+            border-right: none;
+        }
+
+        &__link:hover {
+            color: #33c1e3;
+        }
+
+        &__link--current {
+            color: #33c1e3;
+            font-weight: bold;
+        }
+
+        &__link--current:hover {
+            animation-name: color;
+            animation-duration: 2s;
+            animation-delay: 0.2s;
+            animation-iteration-count: infinite;
+        }
+
+
+    }
+
+    .fa {
+        display: none;
+    }
+
 }

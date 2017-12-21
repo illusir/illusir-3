@@ -7,6 +7,10 @@
      background: #f5f5f5;
 }
 
+.link {
+    text-decoration: none;
+}
+
 .content {
     padding-top: 80px;
     min-height: calc(100vh - 130px);
@@ -41,6 +45,8 @@
     color: $primary-color;
     font-size: 35px;
     font-weight: 600;
+    animation-name: slide;
+    animation-duration: 2s;
 }
 
 .text {
@@ -50,6 +56,18 @@
 
 .fa {
     margin-right: 5px;
+}
+
+@keyframes slide {
+    from {
+      transform: translate3d(100%, 0, 0);
+      opacity: 0;
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
 }
 
 /*@media заросы*/
@@ -64,5 +82,16 @@
     .container {
         margin: 0 auto;
         width: 100%;
+
+        &__row {
+          @include flex ();
+          flex-direction: column;
+          width: 100%;
+
+          &--space {
+            justify-content: space-between;
+          }
+        }
     }
+
 }

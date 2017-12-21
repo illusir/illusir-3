@@ -1,42 +1,52 @@
 .portfolio-content {
     width: 700px;
     padding: 0 15px;
+
 }
 
 .portfolio-area {
     @include flex ();
     float: right;
-    flex-direction: row;
-    align-content: flex-start;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    animation-name: slide;
+    animation-duration: 2s;
+    margin-top: -2px;
     }
 
 .card {
-    @include flex ();
-    flex-direction: column;
-    position: relative;
     width: 220px;
-    height: 281px;
     border-radius: 10px;
     box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
     background-color: white;
-    padding-bottom: 20px;
-    flex-wrap: wrap;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    &:nth-child(3n+3) {
+        margin-right: 0;
+    }
+
+    &:hover {
+        animation-name: cardzoom;
+        animation-duration: .5s;
+        animation-fill-mode:forwards;
+        box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+    }
 
     &__img {
         width: 220px;
-        height: 171px;
+        height: 172px;
     }
 
     &__description {
-        padding: 20px;
+        padding: 15px 20px 16px 20px;
     }
 }
 
 .image--card {
-    width: 220px;
-    height: 171px;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px 10px 0 0;
 }
 
 .text--big {
@@ -47,11 +57,56 @@
     line-height: 24px;
     font-size: 14px;
     font-weight: 300;
+    padding-bottom: 10px;
 }
 
-.text--h3-2 {
+.text--h3card {
     line-height: 26px;
     font-size: 21px;
-    font-weight: 300;
+    font-weight: normal;
     color: #33c1e3;
+}
+
+.card:hover .text--h3card {
+    color: #e85f61;
+}
+
+.link--tag {
+    font-weight: bold;
+    font-size: 14px;
+    color: #aeaeae;
+
+    &:hover {
+        color: #33c1e3;
+    }
+}
+
+.fa-desktop {
+    font-size: 18px;
+}
+
+.fa-mobile {
+    font-size: 18px;
+}
+
+@keyframes cardzoom {
+    0% {
+      transform: scale(1, 1);
+    }
+
+    100% {
+      transform: scale(1.02, 1.02);
+    }
+}
+
+@keyframes slide {
+    from {
+      transform: translate3d(100%, 0, 0);
+      opacity: 0;
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
 }
